@@ -1,0 +1,103 @@
+[versions]
+agp = "8.8.2"
+kotlin = "2.0.0"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.7"
+activityCompose = "1.10.1"
+viewModelCompose = "2.7.1"
+composeBom = "2024.04.01"
+okhttp = "4.11.0"
+retrofit = "2.11.0"
+moshi = "1.13.0"
+viewmodel = "2.8.7"
+material3 = "1.3.1"
+hilt = "2.51.1"
+coroutines = "1.7.1"
+# Test
+mockito = "5.11.0"
+mockitoKotlin = "5.1.0"
+coreTesting = "2.2.0"
+runner = "1.5.2"
+rules = "1.5.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+# Import the Compose BOM
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+# Compose UI
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewModelCompose" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+
+# Compose Testing
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+#androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+
+# Kotlin Coroutines & Flow
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+
+# Hilt (Dependency Injection)
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+
+# Rerotfit (Network)
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+
+# Moshi (JSON Parsing)
+moshi = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
+moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
+
+# viewmodel
+androidx-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "viewmodel" }
+androidx-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewmodel" }
+androidx-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "viewmodel" }
+
+# Matarial 3
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref= "material3" }
+
+# Unit Testing (Test)
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+# Unit Testing Mockito
+mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+# Kotlin friendly Mockito
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockitoKotlin" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+# For Testing LiveData
+core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "coreTesting" }
+
+# Android Instrumentation Testing (androidTest)
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
+rules = { group = "androidx.test", name = "rules", version.ref = "rules" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+# unit hilt 已經宣告
+#hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" } # unit 已經宣告
+mockito-android = { group = "org.mockito", name = "mockito-android", version.ref = "mockito" }
+# unit mock 已經宣告
+#mockito-kotlin = { group = "org.mockito", name = "mockito-kotlin", version.ref = "mockito" }
+# unit coroutines 已經宣告
+#kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+# unit core-testing 已經宣告
+#core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "coreTesting" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+# Hilt
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
